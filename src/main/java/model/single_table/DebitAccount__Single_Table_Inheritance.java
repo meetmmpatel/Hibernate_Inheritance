@@ -3,7 +3,7 @@ package model.single_table;
 import javax.persistence.Entity;
 
 @Entity(name = "DebitAccount")
-public class DebitAccount extends Account {
+public class DebitAccount__Single_Table_Inheritance extends Account_Single_Table_Inheritance {
   private double overdraftFee;
   
   public double getOverdraftFee() {
@@ -12,5 +12,12 @@ public class DebitAccount extends Account {
   
   public void setOverdraftFee(double overdraftFee) {
 	this.overdraftFee = overdraftFee;
+  }
+  
+  @Override
+  public String toString() {
+	return "DebitAccount__Single_Table_Inheritance{" +
+			"overdraftFee=" + overdraftFee +
+			'}';
   }
 }

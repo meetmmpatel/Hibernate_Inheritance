@@ -1,10 +1,11 @@
 package model.single_table;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity(name = "Account_Single_Table_Inheritance")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Account {
+public abstract class Account_Single_Table_Inheritance implements Serializable {
   
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
